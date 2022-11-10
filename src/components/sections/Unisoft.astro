@@ -1,0 +1,21 @@
+---
+import TeacherCard from "../unisoft/TeacherCard.astro"
+import StudentCard from "../unisoft/StudentCard.astro"
+import ManagementCard from "../unisoft/ManagementCard.astro"
+---
+
+<section class="min-h-screen py-5 flex flex-col items-center">
+    <img class="mt-20 mb-10" src="unisoft.png" alt="Unisoft Logo" />
+    <p class="w-1/2">
+      An integrated system, a mixture of Students Management Information System
+      with E-Learning systems, the aim of which is to deal with all personal
+      information of students in addition to information about the university,
+      the course, information about each class, educational
+    </p>
+  <img src="unisoft-app.png" alt="Unisoft Mobile App" />
+  <div class="flex flex-row justify-center px-10 w-full gap-10">
+    <TeacherCard />
+    <StudentCard />
+    <ManagementCard />
+  </div>
+</section>

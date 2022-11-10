@@ -1,0 +1,65 @@
+---
+import Card from "../schoolink/Card.astro"
+const cardsData1 = [
+  {
+    svg: "wallet",
+    title: "Integrated management system",
+    text: "The system includes everything a hotel apartment facility may need, from the process of receiving and registering guests, monitoring the status and status of vacant and reserved rooms, to counting previous and returning guests ........",
+  },
+  {
+    svg: "person",
+    title: "Guest Profile",
+    text: "The hotel management system allows you to maintain a personal profile of each of your guests. The file includes a personal photo of the guest, proof of identity, and all previous and current reservations, to be used in future reservations, ........",
+  },
+  {
+    svg: "bus",
+    title: "Accounting and billing system",
+    text: "Guaranteed and secure management of all reservations, extensions, and reservation cancellations, in addition to easy billing and reimbursement.",
+  },
+]
+---
+
+<section class="min-h-screen py-5 flex flex-col items-center">
+  <img class="mt-20 mb-10" src="wt-logo.png" alt="SchooLink Logo" />
+  <p class="w-1/2 text-center">
+    A precise system that takes care of the management of furnished apartments
+    and hotels. The system contains all the features that furnished apartment
+    establishments may need from organizing guest information and reservations,
+    managing the condition and cleanliness of apartments and rooms, accounting
+    to micro-management of following up on bills and daily guest operations. In
+    addition, the system provides many useful reports
+  </p>
+  <img src="sl-screens.png" alt="Unisoft Mobile App" />
+  <div class="flex flex-col justify-center px-10 w-full gap-10 text-center my-10">
+    <h4 class="uppercase text-primaryGray text-center">Features</h4>
+    <div class="flex flex-row justify-center items-center">
+      <div class="flex flex-col">
+        <div
+          class="flex flex-col m-auto w-full flex-wrap gap-4 px-10 justify-center"
+        >
+          {
+            cardsData1.map((c) => (
+              <Card svg={c.svg} title={c.title} text={c.text} />
+            ))
+          }
+        </div>
+      </div>
+      <img src="wt-screen.png" alt="White Tower Screen" />
+    </div>
+  </div>
+
+  <div class="flex flex-row items-center justify-center my-10">
+    <img src="wt-screen2.png" alt="White Tower Screen 2" />
+    <div class="flex flex-col">
+      <div
+        class="flex flex-col m-auto w-full flex-wrap gap-4 px-10 justify-center"
+      >
+        {
+          cardsData1.map((c) => (
+            <Card svg={c.svg} title={c.title} text={c.text} />
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

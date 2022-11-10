@@ -1,0 +1,22 @@
+---
+const logoList = [
+  "company-logo-1.png",
+  "company-logo-2.png",
+  "company-logo-3.png",
+  "company-logo-4.png",
+  "company-logo-5.png",
+]
+---
+
+<section
+  id="brands"
+  class="w-full flex flex-row items-center px-5 justify-between py-10"
+>
+  {logoList.map((img: string) => <img src={img} />)}
+</section>
+
+<style>
+  section {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+</style>
