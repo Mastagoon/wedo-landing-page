@@ -1,53 +1,77 @@
 ---
-import Card from "../schoolink/Card.astro"
+import Card from "../schoolink/Card.astro";
 const cardsData = [
   {
-    svg: "wallet",
+    svg: "wallet.svg",
 
     title: "Financial Fee Management",
     text: "It is the safe financial and accounting management for all registrations, student installments, remaining fees and other printing of invoices and bonds",
   },
   {
-    svg: "person",
+    svg: "attendance.svg",
     title: "Attendance",
     text: "The preparation process has now become easy, smooth and without errors, as the system provides the possibility of preparing students directly in the classroom via a tablet or mobile device via the network.",
   },
   {
-    svg: "bus",
+    svg: "bus.svg",
     title: "deportation",
     text: "The system contains a management tracking and monitoring the process of transferring students to and from school, in which all details and routes of the bus are clarified",
   },
   {
-    svg: "calendar",
+    svg: "schedule.svg",
     title: "School Schedule",
     text: "The possibility of creating and preparing the study schedule for all academic levels with ease and organizing it in an orderly manner with the ability for parents to view the study schedule online",
   },
   {
-    svg: "reports",
+    svg: "reports.svg",
     title: "Reports",
     text: "The system is characterized by printing detailed and high-resolution reports so that it is possible to print monthly and midterm grades for students and monitor the grades of the year's work. The final certificate can also be printed",
   },
   {
-    svg: "manage",
+    svg: "class.svg",
     title: "Class Management",
     text: "The ability to add classes and people and configure the system in proportion to the school’s system, style and requirements in an easy and smooth manner",
   },
-]
+];
 ---
 
-<section class="min-h-screen py-5 flex flex-col items-center">
-  <img class="mt-20 mb-10" src="sl-logo.png" alt="SchooLink Logo" />
-  <p class="w-1/2">
-    An integrated system, a mixture of Students Management Information System
-    with E-Learning systems, the aim of which is to deal with all personal
-    information of students in addition to information about the university, the
-    course, information about each class, educational
-  </p>
+<section
+  class="min-h-screen py-5 flex flex-col items-center mt-12 xl:mt-56 p-4"
+>
+  <div class="flex flex-col items-center relative">
+    <div
+      class="hidden sm:blockabsolute bg-purple-500 w-[600px] h-[400px] bottom-0 translate-x-1/2 right-1/2 blur-2xl opacity-10 rounded-full -z-20"
+    >
+    </div>
+    <div
+      class="sm:block absolute bg-purple-500 w-[200px] xl:w-[600px] h-[400px] bottom-0 translate-x-1/2 right-1/3 blur-2xl opacity-10 rounded-full -z-20"
+    >
+    </div>
+    <div
+      class="hidden sm:block absolute bg-purple-500 w-[600px] h-[400px] -bottom-24 -translate-x-1/2 left-1/3 blur-2xl opacity-10 rounded-full -z-20"
+    >
+    </div>
+    <img
+      class="w-[512px] mt-20 mb-10"
+      src="school-link.svg"
+      alt="SchooLink Logo"
+    />
+
+    <p class="max-w-4xl w-full mx-auto text-center">
+      An integrated system, a mixture of Students Management Information System
+      with E-Learning systems, the aim of which is to deal with all personal
+      information of students in addition to information about the university,
+      the course, information about each class, educational
+    </p>
+  </div>
   <img src="sl-screens.png" alt="Unisoft Mobile App" />
   <div class="flex flex-col justify-center px-10 w-full gap-10 text-center">
-    <h4 class="uppercase text-primaryGray text-center">Features</h4>
-    <div class="flex m-auto w-full flex-wrap gap-5 px-10 justify-center">
+    <h4 class="uppercase text-primaryGray text-center font-bold">Features</h4>
+    <div class="flex m-auto w-full flex-wrap gap-8 justify-center">
       {cardsData.map((c) => <Card svg={c.svg} title={c.title} text={c.text} />)}
     </div>
+  </div>
+  <div class="">
+    <img src="school-hotel.svg" alt="" srcset="" />
   </div>
 </section>

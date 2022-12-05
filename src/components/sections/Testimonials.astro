@@ -1,27 +1,34 @@
 ---
-import QuestionMarks from "../testimonials/QuestionMarks.astro"
-import LeftQuote from "../testimonials/LeftQuote.astro"
-import RightQuote from "../testimonials/RightQuote.astro"
+import QuestionMarks from "../testimonials/QuestionMarks.astro";
+import LeftQuote from "../testimonials/LeftQuote.astro";
+import RightQuote from "../testimonials/RightQuote.astro";
 ---
 
 <section class="py-5 flex flex-col items-center relative">
+  <div class="">
+    <img src="white2-test.svg" alt="" />
+  </div>
   <h1 class="text-4xl font-bold uppercase text-primaryGray">testimonials</h1>
   <div class="card-wrapper flex flex-col items-center">
-    <QuestionMarks/>
+    <QuestionMarks />
     <div class="card text-center flex flex-col items-center py-5 px-5">
       <img src="guy.png" alt="guy" />
-			<LeftQuote/>
-			<p class="text-primaryGray">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna
-			</p>
-				<RightQuote />
+      <LeftQuote />
+      <p class="text-primaryGray">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
+        purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor
+        rhoncus dolor purus non enim praesent elementum facilisis leo, vel Lorem
+        ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit
+        amet luctus venenatis, lectus magna
+      </p>
+      <RightQuote />
     </div>
   </div>
 </section>
 
 <style>
   .card-wrapper {
-    width: 1030px;
+    max-width: 1030px;
   }
   .card {
     box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.1);
