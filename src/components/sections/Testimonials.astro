@@ -1,7 +1,6 @@
 ---
 import QuestionMarks from "../testimonials/QuestionMarks.astro";
-import LeftQuote from "../testimonials/LeftQuote.astro";
-import RightQuote from "../testimonials/RightQuote.astro";
+import Testimonials from "../Testimonials.astro";
 ---
 
 <section class="py-5 flex flex-col items-center relative">
@@ -9,20 +8,73 @@ import RightQuote from "../testimonials/RightQuote.astro";
     <img src="white2-test.svg" alt="" />
   </div>
   <h1 class="text-4xl font-bold uppercase text-primaryGray">testimonials</h1>
-  <div class="card-wrapper flex flex-col items-center">
-    <QuestionMarks />
+  <QuestionMarks />
+
+  <div class="card-wrapper flex flex-row items-center gap-8">
+    <img
+      src="left.svg"
+      alt="left arrow icon"
+      class="p-4 card rounded-md cursor-pointer"
+      id="leftBtn"
+    />
     <div class="card text-center flex flex-col items-center py-5 px-5">
-      <img src="guy.png" alt="guy" />
-      <LeftQuote />
-      <p class="text-primaryGray">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
-        purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor
-        rhoncus dolor purus non enim praesent elementum facilisis leo, vel Lorem
-        ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit
-        amet luctus venenatis, lectus magna
-      </p>
-      <RightQuote />
+      <img src="" alt="guy" id="activeTestAvatar" />
+      <svg
+        class="self-start"
+        width="43"
+        height="43"
+        viewBox="0 0 43 43"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g clip-path="url(#clip0_46_199)">
+          <path
+            d="M16.125 20.1562H8.21031C8.46005 18.4931 9.0539 16.9004 9.95395 15.4798C10.854 14.0591 12.0404 12.8418 13.4375 11.9056L15.8428 10.2931L14.3647 8.0625L11.9594 9.675C9.93472 11.0242 8.27442 12.8524 7.12582 14.9972C5.97721 17.1421 5.37582 19.5373 5.375 21.9703V30.9062C5.375 31.619 5.65815 32.3026 6.16215 32.8066C6.66615 33.3106 7.34973 33.5938 8.0625 33.5938H16.125C16.8378 33.5938 17.5213 33.3106 18.0253 32.8066C18.5294 32.3026 18.8125 31.619 18.8125 30.9062V22.8438C18.8125 22.131 18.5294 21.4474 18.0253 20.9434C17.5213 20.4394 16.8378 20.1562 16.125 20.1562Z"
+            fill="#595858"></path>
+          <path
+            d="M34.9375 20.1562H27.0228C27.2725 18.4931 27.8664 16.9004 28.7664 15.4798C29.6665 14.0591 30.8529 12.8418 32.25 11.9056L34.6553 10.2931L33.1906 8.0625L30.7719 9.675C28.7472 11.0242 27.0869 12.8524 25.9383 14.9972C24.7897 17.1421 24.1883 19.5373 24.1875 21.9703V30.9062C24.1875 31.619 24.4706 32.3026 24.9747 32.8066C25.4787 33.3106 26.1622 33.5938 26.875 33.5938H34.9375C35.6503 33.5938 36.3338 33.3106 36.8378 32.8066C37.3419 32.3026 37.625 31.619 37.625 30.9062V22.8438C37.625 22.131 37.3419 21.4474 36.8378 20.9434C36.3338 20.4394 35.6503 20.1562 34.9375 20.1562Z"
+            fill="#595858"></path>
+        </g>
+        <defs>
+          <clipPath id="clip0_46_199">
+            <rect width="43" height="43" fill="white"></rect>
+          </clipPath>
+        </defs>
+      </svg>
+      <p class="text-primaryGray" id="activeTestBody"></p>
+      <svg
+        class="self-end"
+        width="43"
+        height="43"
+        viewBox="0 0 43 43"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g clip-path="url(#clip0_46_203)">
+          <path
+            d="M26.875 22.8437L34.7897 22.8437C34.54 24.5069 33.9461 26.0996 33.0461 27.5202C32.146 28.9409 30.9596 30.1582 29.5625 31.0944L27.1572 32.7069L28.6353 34.9375L31.0406 33.325C33.0653 31.9758 34.7256 30.1476 35.8742 28.0028C37.0228 25.8579 37.6242 23.4627 37.625 21.0297L37.625 12.0938C37.625 11.381 37.3419 10.6974 36.8379 10.1934C36.3338 9.6894 35.6503 9.40625 34.9375 9.40625L26.875 9.40625C26.1622 9.40625 25.4787 9.6894 24.9747 10.1934C24.4706 10.6974 24.1875 11.381 24.1875 12.0937L24.1875 20.1562C24.1875 20.869 24.4706 21.5526 24.9747 22.0566C25.4787 22.5606 26.1622 22.8437 26.875 22.8437Z"
+            fill="#595858"></path>
+          <path
+            d="M8.0625 22.8437L15.9772 22.8437C15.7275 24.5069 15.1336 26.0996 14.2336 27.5202C13.3335 28.9409 12.1471 30.1582 10.75 31.0944L8.34469 32.7069L9.80937 34.9375L12.2281 33.325C14.2528 31.9758 15.9131 30.1476 17.0617 28.0028C18.2103 25.8579 18.8117 23.4627 18.8125 21.0297L18.8125 12.0938C18.8125 11.381 18.5294 10.6974 18.0254 10.1934C17.5213 9.6894 16.8378 9.40625 16.125 9.40625L8.0625 9.40625C7.34973 9.40625 6.66616 9.6894 6.16215 10.1934C5.65815 10.6974 5.375 11.381 5.375 12.0937L5.375 20.1562C5.375 20.869 5.65815 21.5526 6.16215 22.0566C6.66616 22.5606 7.34973 22.8437 8.0625 22.8437Z"
+            fill="#595858"></path>
+        </g>
+        <defs>
+          <clipPath id="clip0_46_203">
+            <rect
+              width="43"
+              height="43"
+              fill="white"
+              transform="translate(43 43) rotate(-180)"></rect>
+          </clipPath>
+        </defs>
+      </svg>
     </div>
+    <img
+      src="right.svg"
+      alt="left arrow icon"
+      class="p-4 card rounded-md cursor-pointer"
+      id="rightBtn"
+    />
   </div>
 </section>
 
@@ -34,3 +86,69 @@ import RightQuote from "../testimonials/RightQuote.astro";
     box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.1);
   }
 </style>
+
+<script>
+  const leftBtn = document.querySelector("#leftBtn");
+  const rightBtn = document.querySelector("#rightBtn");
+  const testImage = document.querySelector("#activeTestAvatar");
+  const testBody = document.querySelector("#activeTestBody");
+
+  const testimonials = [
+    {
+      avatar: "guy.png",
+      body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
+        purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor
+        rhoncus dolor purus non enim praesent elementum facilisis leo, vel Lorem
+        ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit
+        amet luctus venenatis, lectus magna`,
+    },
+    {
+      avatar: "guy.png",
+      body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
+        purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor
+        rhoncus dolor purus non enim praesent elementum facilisis leo`,
+    },
+    {
+      avatar: "guy.png",
+      body: `Lorem ipsum dolentum facilisis leo, vel Lorem
+        ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit
+        amet luctus venenatis, lectus magna`,
+    },
+  ];
+
+  let activeIndex = 0;
+
+  const updateUi = () => {
+    if (testImage) {
+      testImage.setAttribute("src", testimonials[activeIndex].avatar);
+    }
+
+    if (testBody) {
+      testBody.innerHTML = testimonials[activeIndex].body;
+    }
+  };
+
+  updateUi();
+
+  if (leftBtn) {
+    leftBtn.addEventListener("click", () => {
+      if (activeIndex == 0) {
+        activeIndex = testimonials.length - 1;
+        return updateUi();
+      }
+      activeIndex -= 1;
+      return updateUi();
+    });
+  }
+
+  if (rightBtn) {
+    rightBtn.addEventListener("click", () => {
+      if (activeIndex == testimonials.length - 1) {
+        activeIndex = 0;
+        return updateUi();
+      }
+      activeIndex += 1;
+      return updateUi();
+    });
+  }
+</script>
