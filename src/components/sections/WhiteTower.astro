@@ -73,7 +73,7 @@ const cardsData2 = [
       class="flex flex-col-reverse gap-12 xl:flex-row justify-center items-center"
     >
       <div class="flex flex-col">
-        <div class="flex flex-col m-auto w-full flex-wrap gap-8 justify-center">
+        <div class="flex m-auto w-full flex-wrap gap-8 justify-center max-w-md">
           {
             cardsData1.map((c) => (
               <Card svg={c.svg} title={c.title} text={c.text} />
@@ -96,7 +96,7 @@ const cardsData2 = [
       class="w-full max-w-[700px]"
     />
     <div class="flex flex-col">
-      <div class="flex flex-col m-auto w-full flex-wrap gap-8 justify-center">
+      <div class="flex m-auto w-full flex-wrap gap-8 justify-center max-w-md">
         {
           cardsData2.map((c) => (
             <Card svg={c.svg} title={c.title} text={c.text} />

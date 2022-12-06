@@ -65,9 +65,9 @@ const cardsData = [
     </p>
   </div>
   <img src="sl-screens.png" alt="Unisoft Mobile App" />
-  <div class="flex flex-col justify-center px-10 w-full gap-10 text-center">
+  <div class="flex flex-col justify-center xl:px-10 w-full gap-10 text-center">
     <h4 class="uppercase text-primaryGray text-center font-bold">Features</h4>
-    <div class="flex m-auto w-full flex-wrap gap-8 justify-center">
+    <div class="flex m-auto w-full flex-wrap gap-8 justify-center max-w-7xl">
       {cardsData.map((c) => <Card svg={c.svg} title={c.title} text={c.text} />)}
     </div>
   </div>
