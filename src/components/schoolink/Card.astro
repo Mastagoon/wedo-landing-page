@@ -2,8 +2,10 @@
 const { title, text, svg } = Astro.props;
 ---
 
-<div class="card flex flex-col gap-3 p-3 text-left rounded-md max-w-sm">
-  <img src={svg} class="w-8" />
+<div
+  class="card flex flex-col gap-3 p-3 text-left rounded-md max-w-sm hover:scale-105 hover:bg-gray-50 transition-all"
+>
+  <img src={svg} class="w-8" alt={title} />
 
   <h1 class="uppercase font-bold text-xl">{title}</h1>
   <p class="text-primaryGray">{text}</p>

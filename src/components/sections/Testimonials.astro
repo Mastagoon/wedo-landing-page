@@ -10,17 +10,19 @@ import Testimonials from "../Testimonials.astro";
   <h1 class="text-4xl font-bold uppercase text-primaryGray">testimonials</h1>
   <QuestionMarks />
 
-  <div class="card-wrapper flex flex-row items-center gap-8">
+  <div class="card-wrapper flex flex-row items-center gap-2 md:gap-8">
     <img
       src="left.svg"
       alt="left arrow icon"
-      class="p-4 card rounded-md cursor-pointer"
+      class="p-1 md:p-4 card rounded-md cursor-pointer"
       id="leftBtn"
     />
-    <div class="card text-center flex flex-col items-center py-5 px-5">
+    <div
+      class="card text-center flex flex-col items-center py-5 px-5 hover:scale-105 transition-all"
+    >
       <img src="" alt="guy" id="activeTestAvatar" />
       <svg
-        class="self-start"
+        class="self-start w-6 md:w-12"
         width="43"
         height="43"
         viewBox="0 0 43 43"
@@ -43,7 +45,7 @@ import Testimonials from "../Testimonials.astro";
       </svg>
       <p class="text-primaryGray" id="activeTestBody"></p>
       <svg
-        class="self-end"
+        class="self-end w-6 md:w-12"
         width="43"
         height="43"
         viewBox="0 0 43 43"
@@ -72,7 +74,7 @@ import Testimonials from "../Testimonials.astro";
     <img
       src="right.svg"
       alt="left arrow icon"
-      class="p-4 card rounded-md cursor-pointer"
+      class="p-1 md:p-4 card rounded-md cursor-pointer"
       id="rightBtn"
     />
   </div>

@@ -1,24 +1,46 @@
 <div
-  class="fixed bottom-6 flex gap-2 max-w-md w-full rounded-md p-3 left-1/2 bg-white shadow-lg -translate-x-1/2 z-50"
+  class="fixed bottom-6 flex gap-2 max-w-md w-full rounded-md  p-1  py-2 md:p-3 left-1/2 bg-white shadow-lg -translate-x-1/2 z-50 border"
 >
-  <div
-    class="rounded-md bg-green-500 text-white p-2 font-bold flex-grow text-center"
-  >
-    <a href="/#home">Home</a>
-  </div>
-  <div
-    class="rounded-md bg-gray-100 text-gray p-2 font-bold flex-grow text-center hover:bg-gray-200"
-  >
-    <a href="/#schoollink">School Link</a>
-  </div>
-  <div
-    class="rounded-md bg-gray-100 text-gray p-2 font-bold flex-grow text-center hover:bg-gray-200"
-  >
-    <a href="/#unisoft">UNISOFT</a>
-  </div>
-  <div
-    class="rounded-md bg-gray-100 text-gray p-2 font-bold flex-grow text-center hover:bg-gray-200"
-  >
-    <a href="/#hotelams">Hotel AMS</a>
-  </div>
+  <a href="/#home" class="link active">
+    <div>Home</div>
+  </a>
+  <a href="/#schoollink" class="link">
+    <div>School Link</div>
+  </a>
+  <a href="/#unisoft" class="link">
+    <div>UNISOFT</div>
+  </a>
+  <a href="/#hotelams" class="link">
+    <div>Hotel AMS</div>
+  </a>
 </div>
+
+<style>
+  .link {
+    @apply text-sm md:text-base rounded-md bg-gray-100 text-gray-800 p-2 flex-grow text-center hover:bg-gray-200 flex justify-center items-center;
+  }
+  .active {
+    @apply bg-green-500 text-white font-bold;
+  }
+</style>
+
+<script>
+  const links = document.querySelectorAll("a");
+
+  if (links) {
+    links.forEach((link) => {
+      if (link.classList.contains("active")) {
+        link.classList.remove("active");
+      }
+      link.classList.remove("active");
+      link.addEventListener("click", (e) => {
+        links.forEach((prevLink) => {
+          if (prevLink.classList.contains("active")) {
+            prevLink.classList.remove("active");
+          }
+        });
+        link.classList.add("active");
+      });
+    });
+  }
+</script>
