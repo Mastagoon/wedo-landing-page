@@ -1,16 +1,17 @@
 ---
 const logoList = [
-  "company-logo-1.png",
-  "company-logo-2.png",
-  "company-logo-3.png",
-  "company-logo-4.png",
-  "company-logo-5.png",
-]
+  "/comp (1).jpeg",
+  "/comp (2).jpeg",
+  "/comp (3).jpeg",
+  "/comp (4).jpeg",
+  "/comp (5).jpeg",
+  "/comp (6).jpeg",
+];
 ---
 
 <section
   id="brands"
   class="w-full flex flex-col md:flex-row flex-wrap items-center gap-12 px-24 justify-center py-36"
 >
-  {logoList.map((img: string) => <img src={img} alt="company logo"/>)}
+  {logoList.map((img: string) => <img src={img} alt="company logo"  class="w-40"/>)}
 </section>
